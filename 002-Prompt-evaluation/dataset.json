@@ -1,14 +1,11 @@
 [
-  {
-    "task": "Parse an AWS S3 bucket name from an S3 URI in the format 's3://bucket-name/key/path'",
-    "format": "regex"
-  },
-  {
-    "task": "Create a JSON configuration object for an AWS Lambda function that specifies the function name, runtime (python3.11), memory (256 MB), and timeout (30 seconds)",
-    "format": "json"
-  },
-  {
-    "task": "Write a Python function that takes an AWS IAM policy document (as a dictionary) and returns a list of all the Action strings granted by the policy",
-    "format": "python"
-  }
+    {
+        "task": "Write a Python function that extracts the AWS region from an S3 bucket URL. The function should accept a URL like 's3://my-bucket.s3.us-west-2.amazonaws.com/key' and return 'us-west-2'."
+    },
+    {
+        "task": "Create a JSON CloudFormation template snippet that defines an S3 bucket with versioning enabled and public access blocked."
+    },
+    {
+        "task": "Write a regular expression that validates an AWS IAM role ARN format (e.g., 'arn:aws:iam::123456789012:role/MyRole'). The regex should ensure it matches the correct structure with account ID and role name."
+    }
 ]

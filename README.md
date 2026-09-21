@@ -2,6 +2,12 @@
 
 This repository contains hands-on exercises and examples from the [Anthropic course: Building with the Claude API](https://github.com/anthropics/courses/tree/master).
 
+> **About this fork:** These are my personal learning notes and exercises from working through the course — not a polished reference implementation. This fork also fixes a few things in the original repo that broke as Claude models moved forward:
+> - **`temperature` is now rejected outright on Claude Sonnet 5 / Opus 5** (the API returns an error, not just a warning) — `003_temperature.ipynb` now runs on `claude-haiku-4-5`, which still supports it, with a note explaining the change.
+> - **Assistant message prefilling is also rejected on Claude Sonnet 5 / Opus 5** — `005_controlling_output.ipynb`, which is built entirely around prefilling, now runs on `claude-haiku-4-5` for the same reason.
+> - The now end-of-life `claude-sonnet-4-0` model ID was swapped for the current `claude-sonnet-5`.
+> - Stale cached notebook outputs (old deprecation warnings and tracebacks from previous model versions) were cleared throughout.
+
 ## Modules
 
 ### Module 1: Accessing Claude with the API
@@ -170,7 +176,7 @@ Learn the core strategies for building multi-step AI systems — chaining, routi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jaygaha/Building-with-the-Claude-API.git
+   git clone https://github.com/BNoohi/Building-with-the-Claude-API.git
    cd Building-with-the-Claude-API
    ```
 
